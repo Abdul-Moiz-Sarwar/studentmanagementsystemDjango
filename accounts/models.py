@@ -1,11 +1,10 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 
 class Subject(models.Model):
     name = models.CharField(max_length=50)
     code = models.CharField(max_length=50)
 
-class Student(AbstractUser):
+class Student(models.Model):
     student_name = models.CharField(max_length=50)
     parent_name = models.CharField(max_length=50)
     student_email = models.EmailField(unique=True)
