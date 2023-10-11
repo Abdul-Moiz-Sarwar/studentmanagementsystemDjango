@@ -14,7 +14,7 @@ class Student(AbstractUser):
     parent_phone = models.CharField(max_length=11)
     student_CNIC = models.CharField(max_length=13)
     parent_CNIC = models.CharField(max_length=13)
-    grades = [('preend','preend'),('ics_stat','ics_stat'),('ics_cs','ics_cs'),('premed','premed')]
+    grades = [('pre_eng','pre_eng'),('ics_stat','ics_stat'),('ics_cs','ics_cs'),('pre_med','pre_med')]
     grade = models.CharField(max_length=10,choices=grades)
     subjects = models.ManyToManyField(Subject,null=False)
 
